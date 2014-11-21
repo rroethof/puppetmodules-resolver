@@ -1,8 +1,5 @@
 class resolver (
-  $domainname  = hiera('resolver::domainname',undef),
-  $searchpath  = hiera('resolver::searchpath',undef),
-  $nameservers = hiera('resolver::nameservers',undef),
-  $options     = hiera('resolver::options',undef),
+  $settings  = hiera_hash('resolver',undef),
 ) {
 
   file { '/etc/resolv.conf':
