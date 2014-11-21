@@ -30,9 +30,12 @@ If you include the resolver class the dns information will be configured.
 
 You can also configure specific settings via hiera:
 
-    # DNS
-    resolver:
-      searchpath:
-        - %{domain}
-      nameservers:
+    resolver: 
+      nameservers: 
+        - 164.138.28.10
+        - 164.138.28.11
         - 8.8.8.8
+        - 8.8.4.4
+      searchpath: 
+        - familieroethof.nl
+
